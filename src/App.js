@@ -9,10 +9,8 @@ import {
 import "./style.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
-import CatFact from "./CatFact";
-import Pokemon from "./Pokemon";
-import UselessFact from "./UselessFact";
-import KanyeRest from "./KanyeRest";
+import Covid from "./Covid";
+
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -33,22 +31,18 @@ export default function App() {
               Home
             </NavLink>
           </li>
+          <li>
+              <NavLink exact activeClassName="active" to="/covid">
+                covid
+              </NavLink>
+            </li>
           {loggedIn && (
             <React.Fragment>
         
-            <li>
-              <NavLink exact activeClassName="active" to="/pokemon">
-                Pokemon
-              </NavLink>
-            </li>
-     
-  
+
             </React.Fragment>
             
           )}
-          
-         
-  
           <li>
             <NavLink exact activeClassName="active" to="/login">
               Login
@@ -71,8 +65,8 @@ export default function App() {
               <Home />
             </Route>
             
-            <Route path="/pokemon">
-              <Pokemon />
+            <Route path="/covid">
+              <Covid />
             </Route>
           
         
