@@ -35,32 +35,20 @@ export default function App() {
           </li>
           {loggedIn && (
             <React.Fragment>
-            <li>
-              <NavLink exact activeClassName="active" to="/catfacts">
-                CatFact
-              </NavLink>
-            </li>
+        
             <li>
               <NavLink exact activeClassName="active" to="/pokemon">
                 Pokemon
               </NavLink>
             </li>
-            <li>
-              <NavLink exact activeClassName="active" to="/uselessfact">
-                UselessFact
-              </NavLink>
-            </li>
+     
   
             </React.Fragment>
             
           )}
           
          
-          <li>
-            <NavLink exact activeClassName="active" to="/kanyerest">
-              KanyeRest
-            </NavLink>
-          </li>
+  
           <li>
             <NavLink exact activeClassName="active" to="/login">
               Login
@@ -82,18 +70,12 @@ export default function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/catfacts">
-              <CatFact />
-            </Route>
+            
             <Route path="/pokemon">
               <Pokemon />
             </Route>
-            <Route path="/uselessfact">
-              <UselessFact />
-            </Route>
-            <Route path="/kanyerest">
-              <KanyeRest />
-            </Route>
+          
+        
             <Route exact path="/login">
               {!loggedIn ? (
                 <LogIn login={login} />
