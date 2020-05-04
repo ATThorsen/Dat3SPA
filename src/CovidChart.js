@@ -1,11 +1,18 @@
 /* App.js */
+import Covid from  './Covid.js';
+
+
 var React = require('react');
 var Component = React.Component;
 var CanvasJSReact = require('./canvasjs.react');
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+const covidData = Covid.covidData;
+
 class covidChart extends Component {
+	
 	constructor() {
+		console.log("asdasd");
 		super();
 		this.toggleDataSeries = this.toggleDataSeries.bind(this);
 	}
@@ -19,6 +26,12 @@ class covidChart extends Component {
 		this.chart.render();
 	}
 	render() {
+		
+		let activeString = "";
+		for (let i = 0 ; i < Object.keys(covidData.CovidDTO).length ; i++) {  
+			
+			 activeString = activeString + "{ label: " + i + ", y: " + covidData.CovidDTO.covidActive + " } ,";
+			console.log(activeString);
 		const options = {
 			animationEnabled: true,
 			exportEnabled: true,
@@ -45,10 +58,12 @@ class covidChart extends Component {
 			data: [
 			{
 				type: "stackedColumn",
-				name: "General",
+				name: "Active",
 				showInLegend: true,
 				yValueFormatString: "#,###k",
+				
 				dataPoints: [
+					
 					{ label: "Jan", y: 14 },
 					{ label: "Feb", y: 12 },
 					{ label: "Mar", y: 14 },

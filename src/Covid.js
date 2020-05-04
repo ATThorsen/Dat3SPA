@@ -6,14 +6,15 @@ import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 
-export default Covid;
 
-function Covid() {
+
+export default function Covid() {
   const [active, setActive] = useState();
   const [recovered, setRecovered] = useState();
   const [deaths, setDeaths] = useState();
+  const [covidData, setCovidData] = useState();
 
-  function getCovidInfo() {
+   function getCovidInfo() {
     let spot = document.getElementById("spotID").value; 
     let options = facade.makeOptions("GET", true)
     fetch("http://localhost:8080/dat3/api/all/info/"+ spot, options)
@@ -22,11 +23,12 @@ function Covid() {
           console.log(data)
         if(data.code != "403") {
            // setActive(data.CovidDTO[0].Active);
-           getCovidData(data)
+           setCovidData(data)
             console.log("hallo")
              setRecovered(data.CovidDTO[0].Recovered);
             // setDeaths(data.Deaths);
             covidNumbers();
+             
         }
       });
   }
@@ -58,8 +60,8 @@ function Covid() {
    function getCovidData (data) {
   
      let covidActive = "";
-     for (let i = 0 ; i < Object.keys(data.CovidDTO[1].Active).length ; i++) {  
-        console.log("hej")
+     for (let i = 0 ; i < Object.keys(data.CovidDTO).length ; i++) {  
+        
         console.log(Object.keys(data).length);
         covidActive = covidActive + (data.CovidDTO[i].Active);
         console.log(covidActive);
