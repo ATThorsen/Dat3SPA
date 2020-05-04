@@ -21,9 +21,10 @@ function Covid() {
       .then((data) => {
           console.log(data)
         if(data.code != "403") {
-           // setActive(data.covidDTO[0].Active);
-            console.log(data.CovidDTO[0].Active)
-            // setRecovered(data.Recovered);
+           // setActive(data.CovidDTO[0].Active);
+           getCovidData(data)
+            console.log("hallo")
+             setRecovered(data.CovidDTO[0].Recovered);
             // setDeaths(data.Deaths);
             covidNumbers();
         }
@@ -54,11 +55,15 @@ function Covid() {
 }
 
 
-// function getPokemonTypes (data) {
-   
-//   let pokemontype = ""
-//   for (let i = 0 ; i < Object.keys(data.types).length ; i++) {  
-//     pokemontype = pokemontype + data.types[i].type.name + ", "
-//   }
-//   return  pokemontype
+   function getCovidData (data) {
+  
+     let covidActive = "";
+     for (let i = 0 ; i < Object.keys(data.CovidDTO[1].Active).length ; i++) {  
+        console.log("hej")
+        console.log(Object.keys(data).length);
+        covidActive = covidActive + (data.CovidDTO[i].Active);
+        console.log(covidActive);
+    }
+     return  covidActive
 
+  }
