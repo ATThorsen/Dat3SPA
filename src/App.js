@@ -9,7 +9,7 @@ import {
 import "./style.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
-import Covid from "./Covid";
+import Data from "./Data";
 
 
 export default function App() {
@@ -32,8 +32,8 @@ export default function App() {
             </NavLink>
           </li>
           <li>
-              <NavLink exact activeClassName="active" to="/covid">
-                covid
+              <NavLink exact activeClassName="active" to="/Data">
+                Data
               </NavLink>
             </li>
           {loggedIn && (
@@ -65,8 +65,9 @@ export default function App() {
               <Home />
             </Route>
             
-            <Route path="/covid">
-              <Covid />
+            <Route path="/Data">
+              <Data />
+              
             </Route>
           
         
@@ -94,6 +95,13 @@ function Home() {
       <div className="container">
       <h2>Hello World</h2>
       <h3>Please login to see our  awesome stuff</h3>
+       
+    
+      <br />
+      <input type="text" id="spotID" name="spotName" placeholder="City or country"></input>
+      <button onClick={Data.getCovidInfo}>Get Covid Info</button>
+      {/* {covidNumbers()} */}
+    
       </div>
       
       

@@ -1,5 +1,5 @@
 /* App.js */
-import Covid from  './Covid.js';
+import Covid from  './Data.js';
 
 
 var React = require('react');
@@ -12,7 +12,7 @@ const covidData = Covid.covidData;
 class covidChart extends Component {
 	
 	constructor() {
-		console.log("asdasd");
+		console.log(covid.CovidDTO);
 		super();
 		this.toggleDataSeries = this.toggleDataSeries.bind(this);
 	}
@@ -149,4 +149,4 @@ class covidChart extends Component {
 		);
 	}
 }
-module.exports = covidChart;  
+//module.exports = covidChart;  

@@ -8,44 +8,19 @@ import facade from "./apiFacade";
 
 
 
-export default function Covid() {
+export default function Data() {
 
   const [covidData, setCovidData] = useState([]);
 
    function getCovidInfo() {
+     console.log("Hej")
     let spot = document.getElementById("spotID").value; 
     let options = facade.makeOptions("GET", true)
     fetch("http://localhost:8080/dat3/api/all/info/"+ spot, options)
       .then((res) => res.json())
       .then((data) => setCovidData(data)
      ); }
-    console.log(covidData.CovidDTO) ; 
-    
-   
-  //     //  if(data.code != "403") {
-
-  //    //      setCovidData(data)
-  //          console.log(covidData)
-  //           console.log("hallo")
-  //        //    setRecovered(data.CovidDTO[0].Recovered);
-
-  //        //   covidNumbers();
-             
-  //       }
-  //     };
-  // }
-
-  // function covidNumbers() {
-  //   return active ? (
-  //     <>
-  //       <h1>Covid info:</h1>
-  //       <h4>Active cases: {active}</h4>
-  //       <h4>Recovered cases: {recovered}</h4>
-  //       <h4>Deaths : {deaths}</h4>
-  //     </>
-  //   ) : (
-  //     <></>
-  //   );
+    console.log(covidData.CovidDTO); 
 
 
   return (
@@ -53,7 +28,6 @@ export default function Covid() {
       <br />
       <input type="text" id="spotID" name="spotName" placeholder="City or country"></input>
       <button onClick={getCovidInfo}>Get Covid Info</button>
-      {/* {covidNumbers()} */}
     </div>
   );
 
@@ -72,3 +46,4 @@ export default function Covid() {
      return  covidActive
 
   }
+  
