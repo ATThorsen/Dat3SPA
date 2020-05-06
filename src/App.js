@@ -9,11 +9,14 @@ import {
 import "./style.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
-import Data from "./Data";
+import GeoInfo from "./GeoInfo";
 
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
+  
+
+  
 
   const logout = () => {
     facade.logout();
@@ -32,8 +35,8 @@ export default function App() {
             </NavLink>
           </li>
           <li>
-              <NavLink exact activeClassName="active" to="/Data">
-                Data
+              <NavLink exact activeClassName="active" to="/GeoInfo">
+                GeoInfo
               </NavLink>
             </li>
           {loggedIn && (
@@ -65,8 +68,10 @@ export default function App() {
               <Home />
             </Route>
             
-            <Route path="/Data">
-              <Data />
+            <Route path="/GeoInfo">
+
+              <GeoInfo />
+              
               
             </Route>
           
@@ -89,24 +94,18 @@ export default function App() {
   );
 }
 
+
 function Home() {
+  
   return (
     <div>
       <div className="container">
       <h2>Hello World</h2>
-      <h3>Please login to see our  awesome stuff</h3>
-       
-    
-      <br />
-      <input type="text" id="spotID" name="spotName" placeholder="City or country"></input>
-      <button onClick={Data.getCovidInfo}>Get Covid Info</button>
-      {/* {covidNumbers()} */}
-    
+      <h3>Welcome to our Science application!</h3>
+      
       </div>
-      
-      
-    </div>
-  );
+      </div>
+      )
 }
 
 function LogIn({ login }) {
