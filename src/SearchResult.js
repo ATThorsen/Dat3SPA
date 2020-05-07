@@ -4,47 +4,19 @@ import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 
-export default function SearchResult(props) {
-  console.log( props)
-  let  NASADTO = props.allData.NASADTO;
-  console.log (NASADTO)
-  const { data } = props;
+export default function SearchResult({ allData }) {
+  const { OpenCageDTO, weatherDTO, NASADTO } = allData;
+  console.log("This is data in Search Results" + NASADTO);
 
-  setTimeout(4000); {
-
-  
-  if ( props !== undefined ) {
-   let json = JSON.stringify(NASADTO)
-   console.log(json)
-  
-
-    console.log("test " +data);
-    console.log(NASADTO)
-    setTimeout(4000);
-    
-      return (
-          <div className="container">
-            <img src={`data:image/jpeg;base64,${NASADTO}`} />
-      <h2> HEJ HEJ </h2>
-            <div></div>
-          </div>
-        );
-  
-
-  }
-}
-
-
-  
   return (
     <div className="container">
-      <h1>HEJ  </h1>
-      
+      <img height="500" width="500"src={`data:image/jpeg;base64,${NASADTO.img}`} />
 
-      <div></div>
+      <p>TimeZone: {allData.weatherDTO.timezone}</p>
+
+      <div>
+        <h1>Hello World</h1>
+      </div>
     </div>
-  )
-
-  
-  
-  }
+  );
+}

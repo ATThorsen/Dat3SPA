@@ -32,8 +32,12 @@ export default function GeoInfo() {
       const response = await fetch(URL + "/api/all/info/" + param, options);
       const json = await response.json();
       setAllData(json);
-
-      setIsFetched(true);
+      if(response.status === 200){
+        setIsFetched(true);
+        console.log(json)
+      }
+      
+      
     } catch (error) {
       console.log(error);
     }
@@ -50,13 +54,13 @@ export default function GeoInfo() {
       <button
         onClick={(event) => {
           event.preventDefault();
-          getData(search);
+          testGetData(search);
           setIsClicked(true);
         }}
       >
         Search
       </button>
-      {isFetched ? <SearchResult allData={allData} /> : <h1></h1>}
+      {isFetched ? <SearchResult allData={allData} /> : <h1>Hmm?</h1>}
     </div>
   );
 }
