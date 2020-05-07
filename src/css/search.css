@@ -1,0 +1,121 @@
+/* background */
+
+{
+    
+width: 1080px;
+height: 677px;
+background: #FFFFFF;
+
+}
+
+/* navigation */
+
+{
+
+width: 1080px;
+height: 59px;
+background: #FF7481;
+
+}
+
+/* navigation */
+
+{
+
+width: 505px;
+height: 40px;
+background: #FF7481;
+border-radius: 50px;
+
+}
+
+/* Home */
+
+{
+    
+width: 49px;
+height: 21px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+
+}
+
+
+/* Search */
+
+{
+
+width: 57px;
+height: 21px;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 21px;
+color: #FFFFFF;
+background-color: #FF7481;
+border-radius: 50px;
+
+}
+
+/* Logout */
+
+{
+
+width: 141px;
+height: 34px;
+
+}
+
+/* This is a Title */
+
+{
+
+width: 147px;
+height: 29px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 25px;
+line-height: 29px;
+color: #000000;
+
+}
+
+/* City or Country */
+
+{
+
+width: 131px;
+height: 23px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+
+}
+
+/* Search Icon / It can be made with fontawesome instead of this way */
+
+{
+
+left: 70%;
+right: 28.52%;
+
+}
+
+/* Your Logo */
+
+{
+
+width: 40px;
+height: 30px;
+background: url(exlogo.png);
+
+}

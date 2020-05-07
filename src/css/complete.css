@@ -1,0 +1,576 @@
+
+{
+    width: 1080px;
+    height: 677px;
+    background: #FFFFFF;
+    }
+    
+    /* Background */
+    
+    {
+    width: 735px;
+    height: 677px;
+    background: #FF7481;
+    }
+    
+    /* Coronavirus Illustration */
+    
+    {
+    
+    width: 161px;
+    height: 157px;
+    background: url(coronavirus.svg);
+    
+    }
+    /* Username Input*/
+    
+    {
+    
+    width: 372px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    
+    }
+    /* Password Input*/
+    
+    {
+    
+    width: 372px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    
+    }
+    /* Login Button */
+    
+    {
+    
+    width: 267px;
+    height: 44px;
+    border-radius: 50px;
+    
+    }
+    /* Sign In */
+    
+    {
+    
+    width: 91px;
+    height: 35px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+    
+    
+    }
+    /* Don’t have an account? Sign Up! */
+    
+    {
+    
+    width: 240px;
+    height: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    
+    }
+    /* Your logo */
+    
+    {
+    
+    width: 106px;
+    height: 57px;
+    background: url(exlogo.png);
+    
+    
+    }
+
+    ___________________________________________________________________
+
+    
+{
+    width: 1080px;
+    height: 677px;
+    background: #FFFFFF;
+    }
+    
+    /* Background */
+    
+    {
+    width: 735px;
+    height: 677px;
+    background: #FF7481;
+    }
+    
+    /* Coronavirus Illustration */
+    
+    {
+    
+    width: 161px;
+    height: 157px;
+    background: url(coronavirus.svg);
+    
+    }
+    /* Username Input*/
+    
+    {
+    
+    width: 372px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    
+    }
+    /* Password Input*/
+    
+    {
+    
+    width: 372px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    
+    }
+    /* Password Again Input*/
+    
+    {
+    
+        width: 372px;
+        height: 44px;
+        background: #FFFFFF;
+        border-radius: 50px;
+        
+        }
+    /* Register Button */
+    
+    {
+    
+    width: 267px;
+    height: 44px;
+    border-radius: 50px;
+
+    }
+    /* Register Text */
+    
+    {
+    
+    width: 91px;
+    height: 35px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FFFFFF;
+    
+    
+    }
+    /* Want to Sign In? */
+    
+    {
+    
+    width: 240px;
+    height: 20px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    
+    }
+    /* Your logo */
+    
+    {
+    
+    width: 106px;
+    height: 57px;
+    background: url(exlogo.png);
+    
+    
+    }
+
+    __________________________________________________________________________
+
+    /* background */
+
+{
+    width: 1080px;
+    height: 677px;
+    background: #FFFFFF;
+    
+    }
+    
+    /* navigation */
+    
+    {
+    
+    width: 1080px;
+    height: 59px;
+    background: #FF7481;
+    
+    }
+    
+    /* Home */
+    
+    {
+    
+    width: 49px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    
+    }
+    
+    /* Search */
+    
+    {
+    
+    position: absolute;
+    width: 55px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    
+    }
+    
+    /* Logged in as {user} */
+    
+    {
+    width: 151px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    
+    }
+    
+    
+    /* Logout */
+    
+    {
+    
+    width: 141px;
+    height: 34px;
+    
+    }
+    
+    
+    /* This is a Title */
+    
+    {
+    
+    width: 147px;
+    height: 29px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    
+    color: #000000;
+    
+    }
+    
+    
+    /* Your previous searches : */
+    
+    {
+    
+    width: 217px;
+    height: 23px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    
+    color: #000000;
+    }
+    
+    
+    /* Search result */
+    
+    {
+    
+    position: absolute;
+    width: 204px;
+    height: 32px;
+    color: #FF7481;
+    border-radius: 50px;
+    
+    }
+    
+    
+    
+    /* Your Logo */
+    {
+    
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: url(exlogo.png);
+    
+    }
+
+    _________________________________________________________________________________________
+
+    /* background */
+
+{
+
+    width: 1080px;
+    height: 677px;
+    background: #FFFFFF;
+    
+    }
+    
+    /* navigation */
+    
+    {
+    
+    width: 1080px;
+    height: 59px;
+    background: #FF7481;
+    
+    }
+    
+    /* Home */
+    
+    {
+    
+    width: 49px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    
+    }
+    
+    /* Search */
+    
+    {
+    
+    width: 57px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    
+    }
+    
+    
+    
+    /* Logout */
+    
+    {
+    
+    width: 141px;
+    height: 34px;
+    
+    }
+    
+    
+    /* This is a Title */
+    
+    {
+    
+    width: 147px;
+    height: 29px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    
+    }
+    
+    /* Showing results in the last 7 days */
+    
+    {
+    
+    width: 223px;
+    height: 18px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    
+    }
+    
+    
+    
+    /* Satelite image */
+    
+    {
+    
+    width: 446px;
+    height: 302px;
+    background: url(your-image-here.jpg);
+    
+    }
+    
+    /* Chart */
+    
+    {
+    
+    width: 466px;
+    height: 203px;
+    
+    }
+    
+    /* Your Logo */
+    
+    {
+    
+    width: 40px;
+    height: 30px;
+    background: url(exlogo.png);
+    
+    }
+
+    _______________________________________________________________________________________________
+
+    /* background */
+
+{
+    
+    width: 1080px;
+    height: 677px;
+    background: #FFFFFF;
+    
+    }
+    
+    /* navigation */
+    
+    {
+    
+    width: 1080px;
+    height: 59px;
+    background: #FF7481;
+    
+    }
+    
+    /* navigation */
+    
+    {
+    
+    width: 505px;
+    height: 40px;
+    background: #FF7481;
+    border-radius: 50px;
+    
+    }
+    
+    /* Home */
+    
+    {
+        
+    width: 49px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    
+    }
+    
+    
+    /* Search */
+    
+    {
+    
+    width: 57px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background-color: #FF7481;
+    border-radius: 50px;
+    
+    }
+    
+    /* Logout */
+    
+    {
+    
+    width: 141px;
+    height: 34px;
+    
+    }
+    
+    /* This is a Title */
+    
+    {
+    
+    width: 147px;
+    height: 29px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    
+    }
+    
+    /* City or Country */
+    
+    {
+    
+    width: 131px;
+    height: 23px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    
+    }
+    
+    /* Search Icon / It can be made with fontawesome instead of this way */
+    
+    {
+    
+    left: 70%;
+    right: 28.52%;
+    
+    }
+    
+    /* Your Logo */
+    
+    {
+    
+    width: 40px;
+    height: 30px;
+    background: url(exlogo.png);
+    
+    }

@@ -1,0 +1,91 @@
+
+{
+width: 1080px;
+height: 677px;
+background: #FFFFFF;
+}
+
+/* Background */
+
+{
+width: 735px;
+height: 677px;
+background: #FF7481;
+}
+
+/* Coronavirus Illustration */
+
+{
+
+width: 161px;
+height: 157px;
+background: url(coronavirus.svg);
+
+}
+/* Username Input*/
+
+{
+
+width: 372px;
+height: 44px;
+background: #FFFFFF;
+border-radius: 50px;
+
+}
+/* Password Input*/
+
+{
+
+width: 372px;
+height: 44px;
+background: #FFFFFF;
+border-radius: 50px;
+
+}
+/* Login Button */
+
+{
+
+width: 267px;
+height: 44px;
+border-radius: 50px;
+
+}
+/* Sign In */
+
+{
+
+width: 91px;
+height: 35px;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 35px;
+color: #FFFFFF;
+
+
+}
+/* Don’t have an account? Sign Up! */
+
+{
+
+width: 240px;
+height: 20px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 17px;
+line-height: 20px;
+
+}
+/* Your logo */
+
+{
+
+width: 106px;
+height: 57px;
+background: url(exlogo.png);
+
+
+}
