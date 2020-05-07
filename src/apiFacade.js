@@ -1,4 +1,4 @@
-const URL = "http://localhost:8080/Dat3";
+const URL = "http://localhost:8080/dat3";
 
 function handleHttpErrors(res) {
   if (!res.ok) {
@@ -54,6 +54,7 @@ function apiFacade() {
     }
     return opts;
   };
+  
   return {
     makeOptions,
     setToken,
