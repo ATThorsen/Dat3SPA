@@ -44,7 +44,7 @@ export default function GeoInfo() {
       <input
         type="text"
         value={search}
-        onChange={handleSearch}
+         onChange={handleSearch}
         placeholder="City"
       ></input>
       <button
