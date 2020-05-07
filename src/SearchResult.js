@@ -10,13 +10,39 @@ export default function SearchResult({ allData }) {
 
   return (
     <div className="container">
-      <img height="500" width="500"src={`data:image/jpeg;base64,${NASADTO.img}`} />
-
-      <p>TimeZone: {allData.weatherDTO.timezone}</p>
-
-      <div>
-        <h1>Hello World</h1>
+      <div id="satImg">
+        <img
+          height="500"
+          width="500"
+          src={`data:image/jpeg;base64,${NASADTO.img}`}
+        />
       </div>
+      <div id="weatherData">
+        <h1>Weather Data for {weatherDTO.timezone}</h1>
+        <div id="currentWeather">
+          <h3>Current Weather</h3>
+          <p>Temp: {weatherDTO.current.temp} Kelvin</p>
+          <p>Feels like: {weatherDTO.current.feels_like} Kelvin </p>
+          <p>Pressure: {weatherDTO.current.pressure} </p>
+          <p>Humidity: {weatherDTO.current.humidity} </p>
+          <p>Wind Speed: {weatherDTO.current.humidity} M/S </p>
+        </div>
+
+        <div id="dailyWeather"></div>
+      </div>
+    </div>
+  );
+}
+
+function WeatherData({ weatherDTO }) {
+  const { weather } = weatherDTO;
+  console.log("This is WeatherData comp" + weather);
+
+  return (
+    <div>
+      <h1>Weather Data for {weather}</h1>
+      <h3>Current Weather</h3>
+      <div></div>
     </div>
   );
 }

@@ -18,15 +18,9 @@ export default function GeoInfo() {
     setSearch(event.target.value);
   }
 
-  const getData = (param) => {
-    const options = facade.makeOptions("GET", true);
-    return fetch(URL + "/api/all/info/" + param, options)
-      .then((res) => res.json())
-      .then((data) => setAllData(data), setIsFetched(true))
-      .catch((err) => console.log("UPPS"));
-  };
+  
 
-  async function testGetData(param) {
+  async function getData(param) {
     const options = facade.makeOptions("GET", true);
     try {
       const response = await fetch(URL + "/api/all/info/" + param, options);
@@ -43,9 +37,9 @@ export default function GeoInfo() {
     }
   }
   return (
-    <div className="container">
-      <h3>Search for a City to get information</h3>
-      <input
+    <div className="container background">
+      <h3 className="title">Search for a City to get information</h3>
+      <input className="searchBar"
         type="text"
         value={search}
          onChange={handleSearch}
@@ -54,13 +48,14 @@ export default function GeoInfo() {
       <button
         onClick={(event) => {
           event.preventDefault();
-          testGetData(search);
+          getData(search);
           setIsClicked(true);
         }}
       >
         Search
       </button>
-      {isFetched ? <SearchResult allData={allData} /> : <h1>Hmm?</h1>}
+      {isClicked? <h3>Please wait while we find your data</h3> : <h3></h3>}
+      {isFetched ? <SearchResult allData={allData} /> : <h1></h1>}
     </div>
   );
 }

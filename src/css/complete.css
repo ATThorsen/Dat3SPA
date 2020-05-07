@@ -7,7 +7,7 @@
     
     /* Background */
     
-    {
+    .background{
     width: 735px;
     height: 677px;
     background: #FF7481;
@@ -24,7 +24,7 @@
     }
     /* Username Input*/
     
-    {
+    .usernameInput{
     
     width: 372px;
     height: 44px;
@@ -366,7 +366,7 @@
     
     /* Search */
     
-    {
+    .searchBar{
     
     width: 57px;
     height: 21px;
@@ -393,7 +393,7 @@
     
     /* This is a Title */
     
-    {
+    .h1{
     
     width: 147px;
     height: 29px;

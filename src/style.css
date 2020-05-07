@@ -4,29 +4,56 @@ From here https://www.w3schools.com/css/css_navbar.asp
 */
 
 ul.header {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  ul.header li {
-    float: left;
-  }
-  
-  ul.header li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  ul.header li a:hover:not(.active) {
-    background-color:orange;
-  }
-  
-  .active {
-    background-color:#4caf50;
-  }
-  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.header li {
+  float: left;
+}
+
+ul.header li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ul.header li a:hover:not(.active) {
+  background-color: orange;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+.background {
+  width: 735px;
+  height: 677px;
+  background: #ff7481;
+}
+
+.searchBar {
+  width: 57px;
+  height: 21px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.title {
+  width: 147px;
+  height: 29px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  color: #000000;
+}
