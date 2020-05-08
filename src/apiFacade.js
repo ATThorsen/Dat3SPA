@@ -23,6 +23,16 @@ function apiFacade() {
     localStorage.removeItem("jwtToken");
   };
 
+  const register = (user,password) =>{
+    const options = makeOptions("POST", false,{
+      username: user,
+      password: password,
+    });
+    return fetch(URL + "/api/register", options)
+    .then(handleHttpErrors)
+    
+  }
+
   const login = (user, password) => {
     const options = makeOptions("POST", true, {
       username: user,
@@ -62,6 +72,7 @@ function apiFacade() {
     loggedIn,
     login,
     logout,
+    register,
     fetchData
   };
 }
