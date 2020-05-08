@@ -28,7 +28,7 @@ export default function App() {
   };
   return (
     <Router>
-      <div>
+      <div  >
         <ul className="header">
           <li>
             <NavLink exact activeClassName="active" to="/">
@@ -63,7 +63,7 @@ export default function App() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        <div className="content">
+        <div className="content" >
           <Switch>
             <Route exact path="/">
               <Home />
@@ -99,8 +99,8 @@ export default function App() {
 function Home() {
   
   return (
-    <div>
-      <div className="container">
+    <div className="backgroundColorPink" >
+      <div className="backgroundColorWhite" >
       <h2>Hello World</h2>
       <h3>Welcome to our Science application!</h3>
       
@@ -128,9 +128,9 @@ function LogIn({ login }) {
     <div>
       <h2>Login</h2>
       <form onChange={onChange}>
-        <input placeholder="User Name" id="username" />
-        <input placeholder="Password" id="password" />
-        <button onClick={performLogin}>Login</button>
+        <input className="userNameInput" placeholder="User Name" id="username" />
+        <input className="passwordInput" placeholder="Password" id="password" />
+        <button className="loginButton" onClick={performLogin}>Login</button>
       </form>
     </div>
   );

@@ -57,3 +57,35 @@ ul.header li a:hover:not(.active) {
   line-height: 29px;
   color: #000000;
 }
+
+.userNameInput {
+  width: 372px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+.passwordInput {
+  width: 372px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50px;
+}
+
+.loginButton {
+  width: 267px;
+  height: 44px;
+  border-radius: 50px;
+}
+
+.backgroundColorWhite {
+  width: 1080px;
+  height: 677px;
+  background: #ffffff;
+}
+
+.backgroundColorPink {
+  width: 735px;
+  height: 677px;
+  background: #ff7481;
+}
