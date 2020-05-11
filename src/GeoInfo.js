@@ -37,9 +37,9 @@ export default function GeoInfo() {
     }
   }
   return (
-    <div className="backgroundColorWhite">
+    <div className="backgroundColorWhite container-fluid" >
       
-      <h3 className="title">Search for City</h3>
+      <h3 className="Searchtitle">Search for City</h3>
       <input className="searchBar"
         type="text" 
         value={search}

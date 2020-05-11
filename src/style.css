@@ -54,17 +54,16 @@ ul.header li a:hover:not(.active) {
 }
 
 
-.searchBar {
+
+.searchBar, .SearchClick, .Searchtitle {
 
   position: absolute;
   width: 505px;
   height: 40px;
-  left: 287px;
-  top: 230px;
+  top: 210px; 
+  left: 40%;  
   text-align: center ; 
-  
-
-  
+   
   background: #FF7481;
   border-radius: 50px;
 
@@ -78,22 +77,19 @@ ul.header li a:hover:not(.active) {
 .SearchClick{
 border-radius: 100px;
 position: absolute;
-left: 67%;
-right: 28.52%;
-top: 34.6%;
-bottom: 60.74%;
-
+width: 60px; 
+height: 35px;
+top: 215px; 
+left: 60.8%; 
 background: #FFFFFF;
-
-
-
 }
 
-.title {
+.Searchtitle {
+  background: #FFFFFF; 
   position: absolute;
   width: 160px;
   height: 29px;
-  left: 466px;
+  left: 48%; 
   top: 111px;
   
   font-family: Roboto;
@@ -111,7 +107,7 @@ background: #FFFFFF;
   position: absolute;
   width: 372px;
   height: 44px;
-  left: 527px;
+  left: 33%;
   top: 242px;
   
 }
@@ -120,7 +116,7 @@ background: #FFFFFF;
   position: absolute;
   width: 372px;
   height: 44px;
-  left: 527px;
+  left: 33%;
   top: 299px;
   
 }
@@ -129,7 +125,7 @@ background: #FFFFFF;
   position: absolute;
   width: 267px;
   height: 44px;
-  left: 579px;
+  left: 36%;
   top: 392px;
   
 }
@@ -138,8 +134,8 @@ background: #FFFFFF;
   position: absolute;
 width: 91px;
 height: 35px;
-left: 667px;
-top: 68px;
+left: 40%;
+top: 120px;
 
 font-family: Roboto;
 font-style: normal;

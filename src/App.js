@@ -164,11 +164,11 @@ function LogIn({ login }) {
   };
 
   return (
-    <div className="backgroundColorPink">
+    <div >
       <h2 className="signin">Login</h2>
       <form onChange={onChange}>
-        <input className="userNameInput" placeholder="User Name" id="username" />
-        <input className="passwordInput" placeholder="Password" id="password" />
+        <input className="userNameInput" placeholder="Username" id="username" />
+        <input className="passwordInput" placeholder="Password" id="password"  />
         <button className="loginButton" onClick={performLogin}>Login</button>
       </form>
     </div>
@@ -204,11 +204,11 @@ function Register() {
   };
   return (
     <div>
-      <h2>Register</h2>
+      <h2  className="signin">Register</h2>
       <form onChange={onChange}>
-        <input placeholder="Username" id="username" />
-        <input placeholder="Password" id="password" />
-        <button onClick={performRegister}>Register</button>
+        <input className="userNameInput" placeholder="Username" id="username" />
+        <input className="passwordInput" placeholder="Password" id="password"  />
+        <button className="loginButton" onClick={performRegister}>Register</button>
       </form>
     </div>
   );
