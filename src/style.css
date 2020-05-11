@@ -3,12 +3,35 @@ This is the Horizontal Navigation Bar Example with Active/Current Navigation Lin
 From here https://www.w3schools.com/css/css_navbar.asp
 */
 
+.aspectwrapper {
+  display: inline-block; /* shrink to fit */
+  width: 100%;           /* whatever width you like */
+  position: relative;    /* so .content can use position: absolute */
+}
+.aspectwrapper::after {
+  padding-top: 56.25%; /* percentage of containing block _width_ */
+  display: block;
+  content: '';
+}
+.content {
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;  /* follow the parent's edges */
+  outline: thin dashed green;            /* just so you can see the box */
+}
+
+
 ul.header {
+  display: inline-block; /* shrink to fit */
+  width: 100%;           /* whatever width you like */
+  position: relative;    /* so .content can use position: absolute */
+
+background: #FF7481;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #FF7481;
+ 
 }
 
 ul.header li {
@@ -30,62 +53,123 @@ ul.header li a:hover:not(.active) {
   background-color: #4caf50;
 }
 
-.background {
-  width: 735px;
-  height: 677px;
-  background: #ff7481;
-}
 
 .searchBar {
-  width: 57px;
-  height: 21px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 21px;
-  color: #ffffff;
+
+  position: absolute;
+  width: 505px;
+  height: 40px;
+  left: 287px;
+  top: 230px;
+  text-align: center ; 
+  
+
+  
+  background: #FF7481;
+  border-radius: 50px;
+
+}
+::placeholder {  
+  color: black;
+  
+  
+}
+
+.SearchClick{
+border-radius: 100px;
+position: absolute;
+left: 67%;
+right: 28.52%;
+top: 34.6%;
+bottom: 60.74%;
+
+background: #FFFFFF;
+
+
+
 }
 
 .title {
-  width: 147px;
+  position: absolute;
+  width: 160px;
   height: 29px;
+  left: 466px;
+  top: 111px;
+  
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 29px;
+  
   color: #000000;
+  
 }
 
 .userNameInput {
+
+  position: absolute;
   width: 372px;
   height: 44px;
-  background: #ffffff;
-  border-radius: 50px;
+  left: 527px;
+  top: 242px;
+  
 }
 
 .passwordInput {
+  position: absolute;
   width: 372px;
   height: 44px;
-  background: #ffffff;
-  border-radius: 50px;
+  left: 527px;
+  top: 299px;
+  
 }
 
 .loginButton {
+  position: absolute;
   width: 267px;
   height: 44px;
-  border-radius: 50px;
+  left: 579px;
+  top: 392px;
+  
 }
 
+.signin {
+  position: absolute;
+width: 91px;
+height: 35px;
+left: 667px;
+top: 68px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 35px;
+
+color: rgb(102, 87, 87);
+
+}
+
+
+
 .backgroundColorWhite {
-  width: 1080px;
-  height: 677px;
-  background: #ffffff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+  background: #FFFFFF;
 }
 
 .backgroundColorPink {
-  width: 735px;
-  height: 677px;
-  background: #ff7481;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  left: 345px;
+  top: 0px;
+  
+  background: #FF7481;
+  
+  
 }

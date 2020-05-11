@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 import SearchResult from "./SearchResult";
 
@@ -37,15 +37,16 @@ export default function GeoInfo() {
     }
   }
   return (
-    <div className="container background">
-      <h3 className="title">Search for a City to get information</h3>
+    <div className="backgroundColorWhite">
+      
+      <h3 className="title">Search for City</h3>
       <input className="searchBar"
-        type="text"
+        type="text" 
         value={search}
          onChange={handleSearch}
         placeholder="City"
       ></input>
-      <button
+      <button className="SearchClick"
         onClick={(event) => {
           event.preventDefault();
           getData(search);

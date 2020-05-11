@@ -7,7 +7,7 @@ import {
   NavLink,
 } from "react-router-dom";
 import "./style.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+//import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 import GeoInfo from "./GeoInfo";
 
@@ -28,7 +28,8 @@ export default function App() {
   };
   return (
     <Router>
-      <div  >
+   
+      <div className="backgroundColorWhite" >
         <ul className="header">
           <li>
             <NavLink exact activeClassName="active" to="/">
@@ -63,7 +64,7 @@ export default function App() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        <div className="content" >
+        <div className="backgroundColorWhite" >
           <Switch>
             <Route exact path="/">
               <Home />
@@ -90,6 +91,7 @@ export default function App() {
           </Switch>
         </div>
       </div>
+      
       <div></div>
     </Router>
   );
@@ -99,7 +101,7 @@ export default function App() {
 function Home() {
   
   return (
-    <div className="backgroundColorPink" >
+    <div >
       <div className="backgroundColorWhite" >
       <h2>Hello World</h2>
       <h3>Welcome to our Science application!</h3>
@@ -125,8 +127,8 @@ function LogIn({ login }) {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="backgroundColorPink">
+      <h2 className="signin">Login</h2>
       <form onChange={onChange}>
         <input className="userNameInput" placeholder="User Name" id="username" />
         <input className="passwordInput" placeholder="Password" id="password" />

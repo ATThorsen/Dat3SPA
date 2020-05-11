@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import "./style.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 
 export default function SearchResult({ allData }) {
@@ -9,7 +9,7 @@ export default function SearchResult({ allData }) {
   console.log("This is data in Search Results" + NASADTO);
 
   return (
-    <div className="container">
+    <div className="backgroundColorWhite">
       <div id="satImg">
         <img
           height="500"
