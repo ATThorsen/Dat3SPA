@@ -1,27 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
   NavLink,
+  Redirect,
+  
 } from "react-router-dom";
+
 import "./style.css";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 import GeoInfo from "./GeoInfo";
 
-
-
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
-  
+ 
 
-  
 
   const logout = () => {
     facade.logout();
     setLoggedIn(false);
+    
+
   };
   const login = (user, pass) => {
     facade.login(user, pass).then((res) => setLoggedIn(true));
@@ -37,22 +39,50 @@ export default function App() {
             </NavLink>
           </li>
           <li>
-              <NavLink exact activeClassName="active" to="/GeoInfo">
-                GeoInfo
-              </NavLink>
-            </li>
-          {loggedIn && (
-            <React.Fragment>
-        
-
-            </React.Fragment>
-            
-          )}
-          <li>
-            <NavLink exact activeClassName="active" to="/login">
-              Login
+            <NavLink exact activeClassName="active" to="/GeoInfo">
+              GeoInfo
             </NavLink>
           </li>
+          {loggedIn && <React.Fragment></React.Fragment>}
+          {/* If user is logged in, it should show a profile and a logout button instead */}
+          {loggedIn ? (
+            <li>
+              <NavLink exact activeClassName="active" to="/profile">
+                Profile
+              </NavLink>
+            </li>
+          ) : (
+            <li>
+              <NavLink exact activeClassName="active" to="/login">
+                Login
+              </NavLink>
+            </li>
+          )}
+          {loggedIn ? (
+            <li>
+              <NavLink
+                onClick={logout}
+                exact
+                activeClassName="active"
+                to="/"
+              >
+                Logout
+              </NavLink>
+            </li>
+          ) : (
+            <li></li>
+          )}
+
+          {/* If user is logged in, don't show the register component */}
+          {!loggedIn ? (
+            <li>
+              <NavLink exact activeClassName="active" to="/register">
+                Register
+              </NavLink>
+            </li>
+          ) : (
+            <div></div>
+          )}
         </ul>
 
         <hr />
@@ -69,25 +99,29 @@ export default function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            
             <Route path="/GeoInfo">
-
               <GeoInfo />
-              
-              
             </Route>
-          
-        
-            <Route exact path="/login">
-              {!loggedIn ? (
+            )}
+            {!loggedIn ? (
+              <Route exact path="/login">
                 <LogIn login={login} />
-              ) : (
-                <div>
-                  <LoggedIn />
-                  <button onClick={logout}>Logout</button>
-                </div>
-              )}
-            </Route>
+                
+              </Route>
+            ) : (
+              <Route exact path="/profile">
+                <LoggedIn />
+              </Route>
+            )}
+            {!loggedIn ? (
+              <Route path="/register">
+                <Register />
+              </Route>
+            ) : (
+              <Route exact path="/logout">
+                
+              </Route>
+            )}
           </Switch>
         </div>
       </div>
@@ -97,18 +131,20 @@ export default function App() {
   );
 }
 
-
 function Home() {
-  
   return (
+
     <div >
       <div className="backgroundColorWhite" >
       <h2>Hello World</h2>
       <h3>Welcome to our Science application!</h3>
       
       </div>
+=======
+
       </div>
-      )
+  
+  );
 }
 
 function LogIn({ login }) {
@@ -118,6 +154,7 @@ function LogIn({ login }) {
   const performLogin = (evt) => {
     evt.preventDefault();
     login(loginCredentials.username, loginCredentials.password);
+    
   };
   const onChange = (evt) => {
     setLoginCredentials({
@@ -146,8 +183,33 @@ function LoggedIn() {
 
   return (
     <div>
-      <h2>Data Received from server</h2>
+      <h2>Welcome to your profile page</h2>
       <h3>{dataFromServer}</h3>
+    </div>
+  );
+}
+function Register() {
+  const init = { username: "", password: "" };
+  const [registerCredentials, setRegisterCredentials] = useState(init);
+
+  const performRegister = (evt) => {
+    evt.preventDefault();
+    facade.register(registerCredentials.username, registerCredentials.password);
+  };
+  const onChange = (evt) => {
+    setRegisterCredentials({
+      ...registerCredentials,
+      [evt.target.id]: evt.target.value,
+    });
+  };
+  return (
+    <div>
+      <h2>Register</h2>
+      <form onChange={onChange}>
+        <input placeholder="Username" id="username" />
+        <input placeholder="Password" id="password" />
+        <button onClick={performRegister}>Register</button>
+      </form>
     </div>
   );
 }
