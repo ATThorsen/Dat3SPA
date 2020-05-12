@@ -31,7 +31,7 @@ const data = {
 
 
 
-export var ourChart = createReactClass({
+export default var ourChart = createReactClass({
 	
   displayName: 'LineExample',
 
