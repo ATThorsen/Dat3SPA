@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from "react";
 
+import {Line} from 'react-chartjs-2';
 import "./style.css";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
 import ourChart from "./WeatherChart";
+import WeatherData from "./weatherChart2";
+
+
+
 
 export default function SearchResult({ allData }) {
   const { OpenCageDTO, weatherDTO, NASADTO } = allData;
   console.log("This is data in Search Results" + NASADTO);
-  let createReactClasss  = ourChart; 
-  console.log(createReactClasss )
+  
+
+  
+
+ 
+
+
 
   return (
     <div className="backgroundColorWhite">
@@ -20,8 +30,8 @@ export default function SearchResult({ allData }) {
           src={`data:image/jpeg;base64,${NASADTO.img}`}
         />
       </div>
-      <div id="weatherData">
-      <p>{createReactClasss}  </p>
+   <div id="weatherData">
+           <WeatherData data= {weatherDTO.daily} />
         <h1>Weather Data for {weatherDTO.timezone}</h1>
         <div id="currentWeather">
          
@@ -37,18 +47,24 @@ export default function SearchResult({ allData }) {
       </div>
     </div>
   );
+ 
 }
 
-function WeatherData({ weatherDTO }) {
-  const { weather } = weatherDTO;
-  console.log("This is WeatherData comp" + weather);
 
-  return (
-    <div>
-      <h1>Weather Data for {weather}</h1>
-      <h3>Current Weather</h3>
+
+
+
+// function WeatherData({ weatherDTO }) {
+//   const { weather } = weatherDTO;
+//   console.log("This is WeatherData comp" + weather);
+
+//   return (
+//     <div>
+//       <h1>Weather Data for {weather}</h1>
+//       <h3>Current Weather</h3>
       
-      <div></div>
-    </div>
-  );
-}
+//       <div></div>
+//     </div>
+//   );
+// }
+
