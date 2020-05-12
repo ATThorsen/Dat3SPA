@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import facade from "./apiFacade";
+import ourChart from "./WeatherChart";
 
 export default function SearchResult({ allData }) {
   const { OpenCageDTO, weatherDTO, NASADTO } = allData;
@@ -20,7 +21,8 @@ export default function SearchResult({ allData }) {
       <div id="weatherData">
         <h1>Weather Data for {weatherDTO.timezone}</h1>
         <div id="currentWeather">
-          <h3>Current Weather</h3>
+          {ourChart}
+          
           <p>Temp: {weatherDTO.current.temp} Kelvin</p>
           <p>Feels like: {weatherDTO.current.feels_like} Kelvin </p>
           <p>Pressure: {weatherDTO.current.pressure} </p>
@@ -42,6 +44,7 @@ function WeatherData({ weatherDTO }) {
     <div>
       <h1>Weather Data for {weather}</h1>
       <h3>Current Weather</h3>
+      
       <div></div>
     </div>
   );
