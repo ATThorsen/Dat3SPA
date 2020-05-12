@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import {Line} from 'react-chartjs-2';
 var createReactClass = require('create-react-class');
 const data = {
+    
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
   datasets: [
     {
@@ -31,7 +32,12 @@ const data = {
 
 
 
-export default var ourChart = createReactClass({
+export default ourChart; 
+
+
+
+var ourChart = createReactClass({
+
 	
   displayName: 'LineExample',
 

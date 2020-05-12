@@ -8,6 +8,8 @@ import ourChart from "./WeatherChart";
 export default function SearchResult({ allData }) {
   const { OpenCageDTO, weatherDTO, NASADTO } = allData;
   console.log("This is data in Search Results" + NASADTO);
+  let createReactClasss  = ourChart; 
+  console.log(createReactClasss )
 
   return (
     <div className="backgroundColorWhite">
@@ -19,9 +21,10 @@ export default function SearchResult({ allData }) {
         />
       </div>
       <div id="weatherData">
+      <p>{createReactClasss}  </p>
         <h1>Weather Data for {weatherDTO.timezone}</h1>
         <div id="currentWeather">
-          {ourChart}
+         
           
           <p>Temp: {weatherDTO.current.temp} Kelvin</p>
           <p>Feels like: {weatherDTO.current.feels_like} Kelvin </p>
