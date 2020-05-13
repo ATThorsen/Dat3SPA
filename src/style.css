@@ -147,6 +147,57 @@ color: rgb(102, 87, 87);
 
 }
 
+.Graph {
+  background: #FFFFFF; 
+  position: absolute;
+  width: 800px;
+  left: 48%; 
+  top: 0%;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  
+  color: #000000;
+  
+}
+
+.SatImage {
+  background: #FFFFFF; 
+  position: absolute;
+  width: 800px;
+  left: 20%; 
+  top: -10%;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  
+  color: #000000;
+  
+}
+
+.WeatherData {
+   
+  position: absolute;
+  width:  800px;
+  left:   20%; 
+  top:    700px;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 29px;
+  
+  color: #000000;
+  
+}
+
 
 
 .backgroundColorWhite {

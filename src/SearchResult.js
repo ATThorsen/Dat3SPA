@@ -7,34 +7,36 @@ import facade from "./apiFacade";
 import ourChart from "./WeatherChart";
 import WeatherData from "./weatherChart2";
 
+export var weatherChartData; 
 
 
 
 export default function SearchResult({ allData }) {
   const { OpenCageDTO, weatherDTO, NASADTO } = allData;
   console.log("This is data in Search Results" + NASADTO);
-  
+  weatherChartData = weatherDTO.daily; 
 
-  
-
- 
 
 
 
   return (
     <div className="backgroundColorWhite">
-      <div id="satImg">
+      <div id="satImg" className="SatImage">
+      <h2>Satelite image of {weatherDTO.timezone}</h2>
         <img
           height="500"
           width="500"
           src={`data:image/jpeg;base64,${NASADTO.img}`}
         />
       </div>
+      <div className="Graph">   
+       <WeatherData data= {weatherDTO.daily} /> 
+       </div>
    <div id="weatherData">
-           <WeatherData data= {weatherDTO.daily} />
+        
+    
+        <div id="currentWeather" className="WeatherData">
         <h1>Weather Data for {weatherDTO.timezone}</h1>
-        <div id="currentWeather">
-         
           
           <p>Temp: {weatherDTO.current.temp} Kelvin</p>
           <p>Feels like: {weatherDTO.current.feels_like} Kelvin </p>
