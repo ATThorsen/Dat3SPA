@@ -6,15 +6,19 @@ import "./style.css";
 import facade from "./apiFacade";
 import ourChart from "./WeatherChart";
 import WeatherData from "./weatherChart2";
+import CovidData from "./CovidChart"
 
 export var weatherChartData; 
+export var covidChartData;
 
 
 
 export default function SearchResult({ allData }) {
-  const { OpenCageDTO, weatherDTO, NASADTO } = allData;
+  const { OpenCageDTO, weatherDTO, NASADTO, CovidDTO } = allData;
   console.log("This is data in Search Results" + NASADTO);
+  console.log(CovidDTO);
   weatherChartData = weatherDTO.daily; 
+  covidChartData = CovidDTO;
 
 
 
@@ -29,8 +33,12 @@ export default function SearchResult({ allData }) {
           src={`data:image/jpeg;base64,${NASADTO.img}`}
         />
       </div>
-      <div className="Graph">   
+      <div >   
        <WeatherData data= {weatherDTO.daily} /> 
+       </div>
+      <br></br>
+       <div className="Graph">   
+       <CovidData data= {CovidDTO} /> 
        </div>
    <div id="weatherData">
         
