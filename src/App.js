@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,7 +6,6 @@ import {
   Link,
   NavLink,
   Redirect,
-  
 } from "react-router-dom";
 
 import "./style.css";
@@ -16,22 +15,17 @@ import GeoInfo from "./GeoInfo";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
- 
-
 
   const logout = () => {
     facade.logout();
     setLoggedIn(false);
-    
-
   };
   const login = (user, pass) => {
     facade.login(user, pass).then((res) => setLoggedIn(true));
   };
   return (
     <Router>
-   
-      <div className="backgroundColorWhite" >
+      <div className="backgroundColorWhite">
         <ul className="header">
           <li>
             <NavLink exact activeClassName="active" to="/">
@@ -60,12 +54,7 @@ export default function App() {
           )}
           {loggedIn ? (
             <li>
-              <NavLink
-                onClick={logout}
-                exact
-                activeClassName="active"
-                to="/"
-              >
+              <NavLink onClick={logout} exact activeClassName="active" to="/">
                 Logout
               </NavLink>
             </li>
@@ -94,19 +83,18 @@ export default function App() {
           you have multiple routes, but you want only one
           of them to render at a time
         */}
-        <div className="backgroundColorWhite" >
+        <div className="backgroundColorWhite">
           <Switch>
             <Route exact path="/">
               <Home />
             </Route>
             <Route path="/GeoInfo">
-              <GeoInfo />
+              <GeoInfo isLoggedIn={loggedIn} />
             </Route>
             )}
             {!loggedIn ? (
               <Route exact path="/login">
                 <LogIn login={login} />
-                
               </Route>
             ) : (
               <Route exact path="/profile">
@@ -118,14 +106,12 @@ export default function App() {
                 <Register />
               </Route>
             ) : (
-              <Route exact path="/logout">
-                
-              </Route>
+              <Route exact path="/logout"></Route>
             )}
           </Switch>
         </div>
       </div>
-      
+
       <div></div>
     </Router>
   );
@@ -133,17 +119,13 @@ export default function App() {
 
 function Home() {
   return (
-
-    <div >
-      <div className="backgroundColorWhite" >
-      <h2>Hello World</h2>
-      <h3>Welcome to our Science application!</h3>
-      
+    <div>
+      <div className="backgroundColorWhite">
+        <h2>Hello World</h2>
+        <h3>Welcome to our Science application!</h3>
       </div>
-=======
-
-      </div>
-  
+      =======
+    </div>
   );
 }
 
@@ -154,7 +136,6 @@ function LogIn({ login }) {
   const performLogin = (evt) => {
     evt.preventDefault();
     login(loginCredentials.username, loginCredentials.password);
-    
   };
   const onChange = (evt) => {
     setLoginCredentials({
@@ -164,27 +145,44 @@ function LogIn({ login }) {
   };
 
   return (
-    <div >
+    <div>
       <h2 className="signin">Login</h2>
       <form onChange={onChange}>
         <input className="userNameInput" placeholder="Username" id="username" />
-        <input className="passwordInput" placeholder="Password" id="password"  />
-        <button className="loginButton" onClick={performLogin}>Login</button>
+        <input className="passwordInput" placeholder="Password" id="password" />
+        <button className="loginButton" onClick={performLogin}>
+          Login
+        </button>
       </form>
     </div>
   );
 }
 function LoggedIn() {
-  const [dataFromServer, setDataFromServer] = useState("Loading...");
+  const [dataFromServer, setDataFromServer] = useState([]);
 
   useEffect(() => {
-    facade.fetchData().then((data) => setDataFromServer(data.msg));
+    facade.fetchData().then((data) => setDataFromServer(data.allSearches));
   }, []);
 
+  const tableData = dataFromServer.map((search) => (
+    <tr>
+      <td>{search.search}</td>
+      <td>{search.date}</td>
+    </tr>
+  ));
   return (
-    <div>
-      <h2>Welcome to your profile page</h2>
-      <h3>{dataFromServer}</h3>
+    <div className="backgroundColorWhite">
+      <div className="PreviousSearches">
+        <h2>Welcome to your profile page {facade.getUserName()}</h2>
+        <h3>Here are your previous searches</h3>
+        <table>
+          <tr>
+            <th>Search</th>
+            <th>Date</th>
+          </tr>
+          {tableData}
+        </table>
+      </div>
     </div>
   );
 }
@@ -204,11 +202,13 @@ function Register() {
   };
   return (
     <div>
-      <h2  className="signin">Register</h2>
+      <h2 className="signin">Register</h2>
       <form onChange={onChange}>
         <input className="userNameInput" placeholder="Username" id="username" />
-        <input className="passwordInput" placeholder="Password" id="password"  />
-        <button className="loginButton" onClick={performRegister}>Register</button>
+        <input className="passwordInput" placeholder="Password" id="password" />
+        <button className="loginButton" onClick={performRegister}>
+          Register
+        </button>
       </form>
     </div>
   );

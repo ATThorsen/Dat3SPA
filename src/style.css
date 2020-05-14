@@ -220,3 +220,21 @@ color: rgb(102, 87, 87);
   
   
 }
+
+
+    
+    /* Your previous searches : */
+    
+    .PreviousSearches{
+    
+      width: 217px;
+      height: 23px;
+      
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      
+      color: #000000;
+      }

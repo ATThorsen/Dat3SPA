@@ -5,9 +5,9 @@ import "./style.css";
 import facade from "./apiFacade";
 import SearchResult from "./SearchResult";
 
-export default function GeoInfo() {
+export default function GeoInfo({isLoggedIn}) {
   const URL = "http://localhost:8080/dat3";
-
+  
   const options = facade.makeOptions("GET", true);
   const [allData, setAllData] = useState([]);
   const [search, setSearch] = useState();
@@ -29,6 +29,11 @@ export default function GeoInfo() {
       if(response.status === 200){
         setIsFetched(true);
         console.log(json)
+        console.log(isLoggedIn)
+        if(isLoggedIn){
+          
+          facade.saveSearch(facade.getUserName(), param);
+        }
       }
       
       
