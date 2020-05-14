@@ -11,28 +11,22 @@ var i = 0;
 export default  createReactClass({
   displayName: 'CovidChart',
   render() {
-    var confirmed = []; 
+  var confirmed = []; 
 	var recovered = []; 
-	var day=[];
-	var dayString;
-	var confirmedString;
+  var day=[];
+
 	for ( i = 0; i < covidChartData.length; i++) {
 		day.push(i);
 		confirmed.push(covidChartData[i].Confirmed)
-		
-		dayString = day.join()
-		confirmedString = confirmed.join()
-		
-	}
-	console.log(confirmed.length)
-	console.log(day.length)
+  }
+
       const data = {
-        labels: [1,2,3,4], 
+        labels: day, 
         datasets: [
           {
             label: 'Confirmed',
             fill: false,
-            lineTension: 0.1,
+            lineTension: 0.0001,
             backgroundColor: 'rgba(75,192,192,0.4)',
             borderColor: 'rgba(75,192,192,1)',
             borderCapStyle: 'butt',
@@ -45,13 +39,13 @@ export default  createReactClass({
             pointHoverRadius: 5,
             pointHoverBackgroundColor: 'rgba(75,192,192,1)',
             pointHoverBorderColor: 'rgba(220,220,220,1)',
-            pointHoverBorderWidth: 2,
+            pointHoverBorderWidth: 10,
             pointRadius: 1,
             pointHitRadius: 10,
-            data: [confirmedString]
+            data: confirmed
           }
         ]
-      };
+      }
 
     return (
       <div>

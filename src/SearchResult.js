@@ -33,11 +33,11 @@ export default function SearchResult({ allData }) {
           src={`data:image/jpeg;base64,${NASADTO.img}`}
         />
       </div>
-      <div >   
+      <div  className="Graph">   
        <WeatherData data= {weatherDTO.daily} /> 
        </div>
       <br></br>
-       <div className="Graph">   
+       <div className="Graph" >   
        <CovidData data= {CovidDTO} /> 
        </div>
    <div id="weatherData">
