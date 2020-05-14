@@ -21,7 +21,7 @@ export default  createReactClass({
         day1= "Sunday"
     }   
     actualdays.push(day1); 
-    tempForDays.push(weatherChartData[i].temp.day-273)        
+    tempForDays.push(weatherChartData[i].temp.day)        
     }
       const data = {
         labels: [ "", actualdays[0], actualdays[1], actualdays[2], actualdays[3], actualdays[4], actualdays[5], actualdays[6]], 
