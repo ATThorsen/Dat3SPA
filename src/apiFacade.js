@@ -12,8 +12,15 @@ function apiFacade() {
   const setToken = token => {
     localStorage.setItem("jwtToken", token);
   };
+  
   const getToken = () => {
     return localStorage.getItem("jwtToken");
+  };
+  const setUserName = username =>{
+    localStorage.setItem("username", username);
+  }
+  const getUserName = () => {
+    return localStorage.getItem("username");
   };
   const loggedIn = () => {
     const loggedIn = getToken() != null;
@@ -33,6 +40,18 @@ function apiFacade() {
     
   }
 
+  
+  const saveSearch = (user, search) => {
+    const options = makeOptions("POST", false, {
+      username: user,
+      search_string: search,
+    });
+    return fetch(URL + "/api/search", options)
+      .then(handleHttpErrors)
+  };
+
+  
+
   const login = (user, password) => {
     const options = makeOptions("POST", true, {
       username: user,
@@ -42,6 +61,7 @@ function apiFacade() {
       .then(handleHttpErrors)
       .then(res => {
         setToken(res.token);
+        setUserName(user);
       });
   };
   const fetchData = () => {
@@ -73,7 +93,10 @@ function apiFacade() {
     login,
     logout,
     register,
-    fetchData
+    fetchData,
+    setUserName,
+    getUserName,
+    saveSearch
   };
 }
 const facade = apiFacade();
