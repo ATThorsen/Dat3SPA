@@ -165,21 +165,21 @@ function LoggedIn() {
   }, []);
 
   const tableData = dataFromServer.map((search) => (
-    <tr>
-      <td>{search.search}</td>
-      <td>{search.date}</td>
+    <tr   >
+      <td className="PreviousSearchesButton">{search.search}</td>
+      <td className="PreviousSearchesButton">{search.date}</td>
     </tr>
   ));
   return (
     <div className="backgroundColorWhite">
-      <div className="PreviousSearches">
-        <h2>Welcome to your profile page {facade.getUserName()}</h2>
-        <h3>Here are your previous searches</h3>
-        <table>
-          <tr>
-            <th>Search</th>
-            <th>Date</th>
-          </tr>
+      <div  >
+        <h2 >Welcome to your profile page {facade.getUserName()}</h2>
+        <h3 >Here are your previous searches</h3>
+        <table >
+          <tr >
+            <th className="PreviousSearches">City</th>
+            <th className="PreviousSearches">Date</th>
+          </tr >
           {tableData}
         </table>
       </div>

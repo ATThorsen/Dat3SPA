@@ -5,33 +5,34 @@ From here https://www.w3schools.com/css/css_navbar.asp
 
 .aspectwrapper {
   display: inline-block; /* shrink to fit */
-  width: 100%;           /* whatever width you like */
-  position: relative;    /* so .content can use position: absolute */
+  width: 100%; /* whatever width you like */
+  position: relative; /* so .content can use position: absolute */
 }
 .aspectwrapper::after {
   padding-top: 56.25%; /* percentage of containing block _width_ */
   display: block;
-  content: '';
+  content: "";
 }
 .content {
   position: absolute;
-  top: 0; bottom: 0; right: 0; left: 0;  /* follow the parent's edges */
-  outline: thin dashed green;            /* just so you can see the box */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; /* follow the parent's edges */
+  outline: thin dashed green; /* just so you can see the box */
 }
-
 
 ul.header {
   display: inline-block; /* shrink to fit */
-  width: 100%;           /* whatever width you like */
-  position: relative;    /* so .content can use position: absolute */
+  width: 100%; /* whatever width you like */
+  position: relative; /* so .content can use position: absolute */
 
-background: #FF7481;
+  background: #ff7481;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #FF7481;
- 
+  background-color: #ff7481;
 }
 
 ul.header li {
@@ -53,63 +54,56 @@ ul.header li a:hover:not(.active) {
   background-color: #4caf50;
 }
 
-
-
-.searchBar, .SearchClick, .Searchtitle {
-
+.searchBar,
+.SearchClick,
+.Searchtitle {
   position: absolute;
   width: 505px;
   height: 40px;
-  top: 210px; 
-  left: 40%;  
-  text-align: center ; 
-   
-  background: #FF7481;
+  top: 210px;
+  left: 40%;
+  text-align: center;
+
+  background: #ff7481;
   border-radius: 50px;
-
 }
-::placeholder {  
+::placeholder {
   color: black;
-  
-  
 }
 
-.SearchClick{
-border-radius: 100px;
-position: absolute;
-width: 60px; 
-height: 35px;
-top: 215px; 
-left: 60.8%; 
-background: #FFFFFF;
+.SearchClick {
+  border-radius: 100px;
+  position: absolute;
+  width: 60px;
+  height: 35px;
+  top: 215px;
+  left: 60.8%;
+  background: #ffffff;
 }
 
 .Searchtitle {
-  background: #FFFFFF; 
+  background: #ffffff;
   position: absolute;
   width: 160px;
   height: 29px;
-  left: 48%; 
+  left: 48%;
   top: 111px;
-  
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 29px;
-  
+
   color: #000000;
-  
 }
 
 .userNameInput {
-
   position: absolute;
   width: 372px;
   height: 44px;
   left: 33%;
   top: 242px;
-  
 }
 
 .passwordInput {
@@ -118,7 +112,6 @@ background: #FFFFFF;
   height: 44px;
   left: 33%;
   top: 299px;
-  
 }
 
 .loginButton {
@@ -127,131 +120,135 @@ background: #FFFFFF;
   height: 44px;
   left: 36%;
   top: 392px;
-  
 }
 
 .signin {
   position: absolute;
-width: 91px;
-height: 35px;
-left: 40%;
-top: 120px;
+  width: 91px;
+  height: 35px;
+  left: 40%;
+  top: 120px;
 
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 35px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
 
-color: rgb(102, 87, 87);
-
+  color: rgb(102, 87, 87);
 }
 
 .weatherGraph {
-  background: #FFFFFF; 
+  background: #ffffff;
   position: absolute;
   width: 800px;
-  left: 48%; 
+  left: 48%;
   top: 0%;
-  
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 29px;
-  
+
   color: #000000;
-  
 }
 
 .covidGraph {
-  background: #FFFFFF; 
+  background: #ffffff;
   position: absolute;
   width: 800px;
-  left: 48%; 
+  left: 48%;
   top: 500px;
-  
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 29px;
-  
+
   color: #000000;
-  
 }
 
 .SatImage {
-  background: #FFFFFF; 
+  background: #ffffff;
   position: absolute;
   width: 800px;
-  left: 20%; 
+  left: 20%;
   top: -10%;
-  
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 29px;
-  
+
   color: #000000;
-  
 }
 
 .WeatherData {
-   
   position: absolute;
-  width:  800px;
-  left:   20%; 
-  top:    700px;
-  
+  width: 800px;
+  left: 20%;
+  top: 700px;
+
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
   line-height: 29px;
-  
+
   color: #000000;
-  
 }
-
-
 
 .backgroundColorWhite {
   position: relative;
   width: 100%;
   height: 100%;
-  
-  background: #FFFFFF;
+
+  background: #ffffff;
 }
 
 .backgroundColorPink {
-
   position: relative;
   width: 100%;
   height: 100%;
   left: 345px;
   top: 0px;
-  
-  background: #FF7481;
-  
-  
+
+  background: #ff7481;
+}
+
+/* Your previous searches : */
+
+.PreviousSearches{
+  border-radius: 3000px;
+  background: #ff7481;
+  position: relative;
+  width: 217px;
+  height: 23px;
+  left: 576px;
+  top: 270px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+}
+
+.PreviousSearchesButton {
+  position: relative;
+  border-radius: 10px;
+
+  background: #ff7481;
+  width: 150px;
+  height: 50px;
+  left: 576px;
+  top: 279px;
+  text-align: center;
 }
 
 
-    
-    /* Your previous searches : */
-    
-    .PreviousSearches{
-    
-      width: 217px;
-      height: 23px;
-      
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 20px;
-      line-height: 23px;
-      
-      color: #000000;
-      }
