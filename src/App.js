@@ -121,10 +121,8 @@ function Home() {
   return (
     <div>
       <div className="backgroundColorWhite">
-        <h2>Hello World</h2>
         <h3>Welcome to our Science application!</h3>
       </div>
-      =======
     </div>
   );
 }
@@ -149,7 +147,7 @@ function LogIn({ login }) {
       <h2 className="signin">Login</h2>
       <form onChange={onChange}>
         <input className="userNameInput" placeholder="Username" id="username" />
-        <input className="passwordInput" placeholder="Password" id="password" />
+        <input className="passwordInput" placeholder="Password" id="password" type="password" />
         <button className="loginButton" onClick={performLogin}>
           Login
         </button>
@@ -173,10 +171,16 @@ function LoggedIn() {
   return (
     <div className="backgroundColorWhite">
       <div  >
-        <h2 >Welcome to your profile page {facade.getUserName()}</h2>
-        <h3 >Here are your previous searches</h3>
-        <table >
-          <tr >
+        <table  className="table" >
+<caption> <h3 className="h3">Welcome to your profile page {facade.getUserName()} </h3> <br></br>
+<h3 >Here are your previous searches</h3>
+
+
+
+
+</caption>
+<caption>  </caption>
+<tr>
             <th className="PreviousSearches">City</th>
             <th className="PreviousSearches">Date</th>
           </tr >
@@ -205,7 +209,7 @@ function Register() {
       <h2 className="signin">Register</h2>
       <form onChange={onChange}>
         <input className="userNameInput" placeholder="Username" id="username" />
-        <input className="passwordInput" placeholder="Password" id="password" />
+        <input className="passwordInput" placeholder="Password" id="password" type="password" />
         <button className="loginButton" onClick={performRegister}>
           Register
         </button>

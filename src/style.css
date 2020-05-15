@@ -224,31 +224,57 @@ ul.header li a:hover:not(.active) {
 .PreviousSearches{
   border-radius: 3000px;
   background: #ff7481;
-  position: relative;
   width: 217px;
-  height: 23px;
-  left: 576px;
-  top: 270px;
-
+  height: 50px;
   font-family: Roboto;
-  font-style: normal;
+  font-style: bold;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 23px;
-
   color: #000000;
 }
 
 .PreviousSearchesButton {
-  position: relative;
-  border-radius: 10px;
-
+  border-radius: 1000px;
   background: #ff7481;
   width: 150px;
   height: 50px;
-  left: 576px;
-  top: 279px;
   text-align: center;
+
+  box-shadow: 0 0 0 0.5pt black;
+}
+
+.table  {
+
+  position: relative;
+  left: 576px;
+  top: -20px;
 }
 
 
+.h3 {
+  font-size: 50px;
+
+}
+
+
+.loader {
+  position: absolute;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-bottom: 16px solid #4caf50; /* Blue */
+  border-top: 16px solid #4caf50; /* Blue */
+  border-right: 16px solid #ff7481;
+  border-left: 16px solid #ff7481;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  top: 350px;
+  left: 49%;
+  text-align: center;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  20% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

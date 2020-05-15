@@ -28,6 +28,7 @@ export default function GeoInfo({isLoggedIn}) {
       setAllData(json);
       if(response.status === 200){
         setIsFetched(true);
+        setIsClicked(false); 
         console.log(json)
         console.log(isLoggedIn)
         if(isLoggedIn){
@@ -60,7 +61,7 @@ export default function GeoInfo({isLoggedIn}) {
       >
         Search
       </button>
-      {isClicked? <h3>Please wait while we find your data</h3> : <h3></h3>}
+      {isClicked? <h4 class="loader"></h4> : <h3></h3>}
       {isFetched ? <SearchResult allData={allData} /> : <h1></h1>}
     </div>
   );

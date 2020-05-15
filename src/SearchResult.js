@@ -20,9 +20,6 @@ export default function SearchResult({ allData }) {
   weatherChartData = weatherDTO.daily; 
   covidChartData = CovidDTO;
 
-
-
-
   return (
     <div className="backgroundColorWhite">
       <div id="satImg" className="SatImage">
@@ -44,19 +41,24 @@ export default function SearchResult({ allData }) {
         
     
         <div id="currentWeather" className="WeatherData">
-        <h1>Weather Data for {weatherDTO.timezone}</h1>
+        <h1>Current Weather in:</h1>
+        <h1> {weatherDTO.timezone}</h1>
           
-          <p>Temp: {weatherDTO.current.temp} Kelvin</p>
-          <p>Feels like: {weatherDTO.current.feels_like} Kelvin </p>
+          <p>Temp: {weatherDTO.current.temp}°C</p>
+          <p>Feels like: {weatherDTO.current.feels_like}°C </p>
           <p>Pressure: {weatherDTO.current.pressure} </p>
           <p>Humidity: {weatherDTO.current.humidity} </p>
-          <p>Wind Speed: {weatherDTO.current.humidity} M/S </p>
+          <p>Wind Speed: {weatherDTO.current.wind_speed} M/S </p>
+          
         </div>
 
         <div id="dailyWeather"></div>
       </div>
     </div>
   );
+
+
+ 
  
 }
 
